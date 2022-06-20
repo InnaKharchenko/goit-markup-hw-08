@@ -14,14 +14,15 @@
 .clients__list {
     
     display: flex;
+    flex-wrap: wrap;
 }
 
 .clients__item {
-    margin-right: 30px;
-
-    &:last-child {
-            margin-right: 0;
-        }
+    
+    @include mq($mobile) {
+        width: calc((100% - 2 * 15px)/2);
+        margin: 15px
+    }
 }
 
 .clients__link {
