@@ -1,7 +1,8 @@
 /*Секція Чим ми займаємося*/
-.work-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.works {
+    @media (max-width: 1199px)  { 
+        display: none;
+    }
 }
 
 .work__list {

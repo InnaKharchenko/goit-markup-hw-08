@@ -73,7 +73,6 @@ p {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -513,6 +512,11 @@ p {
   background-color: var(--second-bd-color);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /*Секція особливості*/
 .qualities {
   padding-top: 94px;
@@ -560,9 +564,10 @@ p {
 }
 
 /*Секція Чим ми займаємося*/
-.work-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media (max-width: 1199px) {
+  .works {
+    display: none;
+  }
 }
 
 .work__list {
@@ -925,11 +930,6 @@ p {
 }
 
 /*Filter section*/
-.filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .filter__list {
   margin-bottom: 50px;
   display: flex;

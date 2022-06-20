@@ -1,6 +1,7 @@
 // utils
 @import "./utils/variables";
 @import "./utils/visually-hiden";
+@import "./utils/mixin";
 
 // base style 
 @import "./base/common";
@@ -16,6 +17,7 @@
 //  loyuots
 @import "./layouts/header";
 @import "./layouts/hero";
+@import "./layouts/section";
 @import "./layouts/qualities";
 @import "./layouts/work";
 @import "./layouts/team";
