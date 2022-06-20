@@ -15,11 +15,11 @@
     background-position: center;
     background-size: cover;
 
-    @media screen and (min-width: 768px) {
+    @include mq($tablet) {
         max-width: 768px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq($desktop) {
         padding-top: 200px;
         padding-bottom: 200px;
         height: 600px;
@@ -40,7 +40,7 @@
     text-transform: uppercase;
     color: var(--second-accent-text-color);
     
-    @media screen and (min-width: 1200px) {
+    @include mq($desktop) {
         width: 696px;
         font-size: 44px;
         line-height: 1.36;

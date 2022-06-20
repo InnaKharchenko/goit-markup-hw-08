@@ -9,7 +9,7 @@
         }
     }
 
-    @if $type =='mobile' {
+    @if $type == 'mobile' {
         @media screen and (min-width: $mobile) {
             @content;
         }
