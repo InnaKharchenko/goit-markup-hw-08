@@ -1,9 +1,6 @@
 /*Section Clients*/
 
-.clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+
 
 .cliets__title {
     color: var(--text-title-color);
@@ -15,6 +12,7 @@
 }
 
 .clients__list {
+    
     display: flex;
 }
 
@@ -43,8 +41,6 @@
             border-color: var(--accent-color);
         }
 }
-
-
 
 .clients__icon {
     fill: currentColor;

@@ -1,10 +1,10 @@
 /*section-hero*/
 
 .hero-section {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
-    height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -14,6 +14,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+        max-width: 1600px;
+        }
 }
 
 .hero__title {
@@ -21,14 +32,21 @@
     margin-right: auto;
     margin-bottom: 30px;
     text-align: center;
-    width: 696px;
+    width: 360px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--second-accent-text-color);
-}
+    
+    @media screen and (min-width: 1200px) {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+        }
+    }
+   
 
 .hero-button {
     padding: 10px 32px;
