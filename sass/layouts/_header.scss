@@ -4,6 +4,7 @@
 }
 
 .header__container {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -86,25 +87,28 @@
     margin: 0;
     padding: 0;
     border: none;
-
-    &:icon-close {
-        display: none;
-    }
-
-    &:is-open .icon-menu {
-        display: none;
-        }
-        
-     &:is-open .icon-close {
-    display: block;
-        }
-
-    
 }
+ .menu-button.icon-close {
+     display: none;
+ }
 
+ .menu-button.is-open .icon-close {
+     display: block;
+ }
 
+ .menu-button.is-open .icon-menu {
+     display: none;
+ }
 
-
+ .menu-container {
+     @media screen and (max-width: 767px){
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+     }
+ }
+ 
 
 /*CONTACTS*/
 
