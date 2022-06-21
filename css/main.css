@@ -144,6 +144,7 @@ p {
   opacity: 1;
   background-color: var(--modal-bg-color);
   transition: opacity var(--slow-anim), visibility var(--slow-anim);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -157,13 +158,21 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  max-height: 609px;
+  width: 100%;
   padding: 40px;
   background-color: var(--second-accent-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--slow-anim), opacity var(--slow-anim);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-width: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -695,11 +704,13 @@ p {
   margin-left: auto;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: -15px;
   }
 }
 
@@ -712,6 +723,20 @@ p {
 @media screen and (max-width: 767.98px) {
   .team__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
   }
 }
 
@@ -759,7 +784,7 @@ p {
   margin: -15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .clients__item {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
@@ -826,6 +851,15 @@ p {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
@@ -845,7 +879,6 @@ p {
 
 .footer-logo {
   display: block;
-  text-align: center;
   margin-bottom: 20px;
   font-family: 'Raleway';
   font-weight: 700;
@@ -854,6 +887,12 @@ p {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-logo {
+    text-align: center;
+  }
 }
 
 .logo__white {
@@ -865,18 +904,28 @@ p {
 }
 
 .address-footer__item {
-  text-align: center;
   text-decoration: none;
   margin-bottom: 9px;
 }
 
+@media screen and (max-width: 1199px) {
+  .address-footer__item {
+    text-align: center;
+  }
+}
+
 .footer-contacts__item {
-  text-align: center;
   margin-bottom: 9px;
 }
 
 .footer-contacts__item:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-contacts__item {
+    text-align: center;
+  }
 }
 
 .adress-footer__link {
@@ -913,9 +962,14 @@ p {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 20px;
   color: var(--second-accent-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-socials__description {
+    text-align: center;
+  }
 }
 
 .footer-socials__list {
@@ -956,8 +1010,10 @@ p {
 }
 
 /*FOOTER SABSCRIBE BLOK*/
-.footer-subscribe {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .footer-subscribe {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -987,7 +1043,7 @@ p {
 }
 
 .footer-subscribe__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
   margin-bottom: 20px;
@@ -1009,6 +1065,7 @@ p {
 @media screen and (min-width: 1200px) {
   .footer-subscribe__input {
     margin-right: 12px;
+    width: 358px;
   }
 }
 
@@ -1099,14 +1156,34 @@ p {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.card-set__item {
-  flex-basis: calc((100% / 3)-30px);
-  margin-top: 30px;
-  margin-left: 30px;
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .card-set {
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .card-set__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-set__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-set__item {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
 }
 
 .card-set__link {

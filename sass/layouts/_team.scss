@@ -20,10 +20,12 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media  screen and (min-width: 1200px) {
+    @media  screen and (min-width: 768px) {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding: -15px;
         }
     }
     
@@ -38,7 +40,16 @@
             margin-bottom: 30px;
         }
     }
-  
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 8 * 15px) / 4);
+            margin: 15px;
+        }
    
 }
 
