@@ -15,16 +15,16 @@
     background-position: center;
     background-size: cover;
 
-    @include mq($tablet) {
+    @media screen and (min-width: 768px) {
         max-width: 768px;
-    }
+    } 
 
-    @include mq($desktop) {
+    @media  screen and (min-width: 1200px) {
         padding-top: 200px;
-        padding-bottom: 200px;
-        height: 600px;
-        max-width: 1600px;
-        }
+            padding-bottom: 200px;
+            height: 600px;
+            max-width: 1600px;
+    } 
 }
 
 .hero__title {
@@ -39,8 +39,8 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--second-accent-text-color);
-    
-    @include mq($desktop) {
+
+    @media screen and (min-width: 1200px){
         width: 696px;
         font-size: 44px;
         line-height: 1.36;

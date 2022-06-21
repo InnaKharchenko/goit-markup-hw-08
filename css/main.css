@@ -571,22 +571,26 @@ p {
   margin: 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .qualities__list {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .qualities__item {
-    width: 270px;
-    margin-right: 30px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 }
 
-.qualities__item:last-child {
-  margin-left: 0;
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .qualities__item {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
 
 .qualities__title {
@@ -610,12 +614,6 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-}
-
-@media screen and (max-width: 1199.99px) {
-  .qualities__description {
-    margin-bottom: 30px;
-  }
 }
 
 .qualities__picture {
@@ -692,7 +690,7 @@ p {
 }
 
 .team__list {
-  display: block;
+  display: inline-block;
   margin-right: auto;
   margin-left: auto;
 }
@@ -706,14 +704,15 @@ p {
 }
 
 .team__item {
-  margin-right: 30px;
   background-color: var(--second-accent-text-color);
-  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.team__item:last-child {
-  margin-right: 0;
+@media screen and (max-width: 767.98px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team__blok {
@@ -756,21 +755,35 @@ p {
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.clients__item {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .clients__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
 
-.clients__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 12 * 15px) / 6);
+    margin: 15px;
+  }
 }
 
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
   color: var(--main-icons-color);
   border: 1px solid var(--main-icons-color);
