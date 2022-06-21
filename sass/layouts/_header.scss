@@ -81,6 +81,30 @@
     color: var(--accent-color);
 }
 
+.menu-button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &:icon-close {
+        display: none;
+    }
+
+    &:is-open .icon-menu {
+        display: none;
+        }
+        
+     &:is-open .icon-close {
+    display: block;
+        }
+
+    
+}
+
+
+
+
 
 /*CONTACTS*/
 

@@ -453,6 +453,25 @@ p {
   color: var(--accent-color);
 }
 
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.menu-button:icon-close {
+  display: none;
+}
+
+.menu-button:is-open .icon-menu {
+  display: none;
+}
+
+.menu-button:is-open .icon-close {
+  display: block;
+}
+
 /*CONTACTS*/
 .contact__list {
   display: flex;
