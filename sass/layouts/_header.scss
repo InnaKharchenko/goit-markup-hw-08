@@ -6,12 +6,12 @@
 .header__container {
     position: relative;
     display: flex;
-    align-items: center;
+    // align-items: center;
 }
 
 .navigation {
     display: flex;
-    align-items: center;
+   align-items: center;
 }
 
 .logo {
@@ -31,6 +31,8 @@
 
 .navigation__list {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation__link {

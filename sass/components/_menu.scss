@@ -1,4 +1,5 @@
    .mobile-menu {
+       display: none;
     //    position: fixed;
        top: 0;
        left: 0;
@@ -28,10 +29,43 @@
        margin-left: auto;
    }
 
+    .mobile-menu__item-socials {
+        margin-right: 10px;
+        margin-left: 10px;
+
+    }
    .mobile-menu__item-socials {
-       margin-right: 20px;
-       &.last-child {
-           margin-right: 0;
-       }
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+    
+    
+        letter-spacing: 0.02em;
+    
+        color: #2196F3;
    }
-   
+   .mobile-menu__link-phone {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+        
+        letter-spacing: 0.02em;
+    
+        color: #2196F3;
+   }
+
+   .mobile-menu__link-email {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+    
+        color: #757575;
+   }

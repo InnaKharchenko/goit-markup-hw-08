@@ -13,6 +13,7 @@
 }
 
 .card-set__item {
+    
     @media screen and (max-width: 767.98px) {
         &:not(:last-child) {
             margin-bottom:  30px;}
@@ -79,8 +80,7 @@
     display: block;
     padding: 20px 24px;
     border: 1px solid var(--second-border-color);
-    border-top: 0;
-    flex-grow: 1;
+    
 }
 
 .card__title {
