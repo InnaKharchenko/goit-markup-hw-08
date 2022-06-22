@@ -49,7 +49,9 @@
     overflow: hidden;
 
 }
-
+.portfolio-img {
+    height: 294px;
+}
 .card-set__text {
     position: absolute;
     top: 0;
@@ -74,11 +76,11 @@
 }
 
 .card {
-    display: inline-block;
-    width: 370px;
+    display: block;
     padding: 20px 24px;
     border: 1px solid var(--second-border-color);
-    border-top: none;
+    border-top: 0;
+    flex-grow: 1;
 }
 
 .card__title {
