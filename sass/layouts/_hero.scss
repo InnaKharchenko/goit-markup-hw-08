@@ -16,15 +16,14 @@
     background-position: center;
     background-size: cover;
 
-    @media screen and (min-width: 768px),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @media screen and (max-width: 767px),  (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/hero_sm@2x.jpg);
+                url(../images/hero/hero_sm.jpg);
             }
 
     @media screen and (min-width: 768px) {
-        max-width: 1199px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero/hero_md.jpg);
+        url(../images/hero/hero_sm@2x.jpg);
                 
     } 
     @media screen and (min-width: 1200px), (min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
