@@ -1148,16 +1148,23 @@ p {
   outline: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-subscribe__input {
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .footer-subscribe__input {
     margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) {
   .footer-subscribe__input {
-    margin-right: 12px;
-    width: 358px;
+    max-width: 450px;
+    width: 100%;
   }
 }
 
