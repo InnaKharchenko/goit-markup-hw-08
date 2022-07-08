@@ -1222,6 +1222,15 @@ p {
   justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
+  .filter__list {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 8px;
+    margin-bottom: 20px;
+  }
+}
+
 .filter__item {
   margin-right: 8px;
 }
