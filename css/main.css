@@ -374,7 +374,6 @@ p {
 
 .mobile-menu {
   display: none;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -452,6 +451,8 @@ p {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
 }
 
 /*header*/
@@ -587,6 +588,20 @@ p {
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__icon-phone {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 /*section-hero*/
