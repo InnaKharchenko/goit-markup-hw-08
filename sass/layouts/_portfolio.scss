@@ -34,7 +34,9 @@
 
 .card-set__link {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow var(--slow-anim);
 
     &:hover,
@@ -77,7 +79,7 @@
 }
 
 .card {
-    display: block;
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid var(--second-border-color);
     
