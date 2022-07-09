@@ -528,12 +528,25 @@ p {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__list {
+    display: block;
+    flex-wrap: wrap;
+  }
+}
+
 .contact__item {
   margin-right: 50px;
 }
 
 .contact__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__item {
+    margin-right: 0;
+  }
 }
 
 .contact__link {

@@ -92,6 +92,13 @@
     display: flex;
     margin-left: auto;
     align-items: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: block;
+        flex-wrap: wrap;
+    }
+        
+    
 }
 
 .contact__item {
@@ -100,6 +107,10 @@
     &:last-child {
             margin-right: 0;
         }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 0;
+    }
+    
 }
 
 
