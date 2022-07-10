@@ -381,27 +381,45 @@ p {
   cursor: pointer;
 }
 
-.menu-container {
+.mob-menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  transform: translateX(100%);
   overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: var(--second-accent-text-color);
-  padding: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-.menu-container .is-open {
-  transform: translateX(0);
+.mob-menu.is-open {
+  display: block;
+}
+
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .mobile-menu__contacts {
   margin-top: auto;
+}
+
+.mobile-menu__link-curent {
+  color: var(--accent-color);
 }
 
 .mobile-menu__item-contacts {
@@ -410,8 +428,6 @@ p {
 }
 
 .mobile-menu__link-phone {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
@@ -421,8 +437,6 @@ p {
 }
 
 .mobile-menu__link-email {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -436,8 +450,6 @@ p {
 }
 
 .mobile-menu__link-nav {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
@@ -454,51 +466,20 @@ p {
 
 .mobile-menu__item-socials {
   list-style: none;
-  margin-right: 10px;
-  margin-left: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__item-socials:not(:last-child) {
+  margin-right: 20px;
 }
 
 .mobile-menu__link-socials {
   text-decoration: none;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  margin-right: 20px;
-}
-
-.mobile-menu__link-socials:last-child {
-  border-right: o;
-}
-
-.menu-button {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button.icon-cross {
-  display: none;
-}
-
-.menu-button.is-open.icon-cross {
-  display: block;
-}
-
-.menu-button.is-open.icon-menu {
-  display: none;
 }
 
 /*header*/
@@ -507,7 +488,6 @@ p {
 }
 
 .header__container {
-  position: relative;
   display: flex;
 }
 
