@@ -646,7 +646,19 @@ p {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact__link {
+    padding: 0 0 0 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link-mail {
     padding-top: 21px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link-phone {
     padding-bottom: 21px;
   }
 }

@@ -141,18 +141,24 @@
     &:focus {
             color: var(--accent-color);
         }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding: 0;
+                 @media screen and (min-width: 768px) and (max-width: 1199px) {
+                     padding: 0 0 0 0;
+                 }
     
-        &:not(last-chaild) {
+    }
+
+    .contact__link-mail {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            padding-top: 21px;
             margin-bottom: 10px;
         }
     }
-    
+
+    .contact__link-phone {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+                padding-bottom: 21px;
     }
-
-
+}
 
 
 
