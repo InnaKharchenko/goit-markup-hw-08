@@ -144,12 +144,14 @@
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0;
-
-    &:not(last-chaild) {
-        margin-bottom: 10px;
+    
+        &:not(last-chaild) {
+            margin-bottom: 10px;
+        }
     }
-                 }
-}
+    
+    }
+
 
 
 
