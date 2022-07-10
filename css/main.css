@@ -354,6 +354,7 @@ p {
 
 .checkbox:checked + .custom-checkbox {
   background-color: var(--accent-color);
+  outline: inherit;
 }
 
 .checkbox:checked + .custom-checkbox .checkbox-icon {
@@ -362,8 +363,16 @@ p {
 
 .checkbox-subscribe {
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 1.16;
+  font-size: 12px;
   color: var(--main-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-subscribe {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-link {
@@ -376,12 +385,32 @@ p {
   display: none;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: var(--second-accent-text-color);
   padding: 40px;
+}
+
+.menu-open-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  padding: 0;
+  background-color: transparent;
+  border: rgba(0, 0, 0, 0);
 }
 
 .mobile-menu__contacts {
@@ -452,7 +481,11 @@ p {
   letter-spacing: 0.02em;
   color: #2196F3;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
+  margin-right: 20px;
+}
+
+.mobile-menu__link-socials:last-child {
+  border-right: o;
 }
 
 /*header*/
@@ -489,6 +522,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation__list {
+    display: none;
+  }
 }
 
 .navigation__link {
@@ -546,10 +585,17 @@ p {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .contact__list {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact__list {
     display: block;
     flex-wrap: wrap;
+    margin: auto;
   }
 }
 
@@ -585,6 +631,13 @@ p {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
@@ -608,21 +661,53 @@ p {
 .hero-section {
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 767px;
+  width: 100%;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background: var(--main-bg-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-@media screen and (max-width: 767px), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) {
   .hero-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_sm.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_mobile.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_desktop.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_desktop@2x.jpg);
   }
 }
 
