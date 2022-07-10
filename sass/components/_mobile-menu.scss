@@ -1,11 +1,12 @@
-   .mobile-menu {
+   .menu-container {
        display: none;
-    //    position: fixed;
+       position: fixed;
        top: 0;
        left: 0;
        width: 100vw;
        height: 100vh;
        z-index: 1;
+       transform: translateX(100%);
        overflow: auto;
        display: flex;
        flex-direction: column;
@@ -13,23 +14,26 @@
        padding: 40px;
    }
 
-   .menu-open-btn {
-       display: inline-flex;
-       margin: 0;
-       padding: 0;
-       border: none;
-       background-color: transparent;
-   }
+    .menu-container .is-open {
+        transform: translateX(0);
+    }
+//    .menu-open-btn {
+//        display: inline-flex;
+//        margin: 0;
+//        padding: 0;
+//        border: none;
+//        background-color: transparent;
+//    }
 
-   .menu-close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        padding: 0;
-        background-color: transparent;
-        border: rgba(0, 0, 0, 0);
-   }
+//    .menu-close-btn {
+//         position: absolute;
+//         top: 20px;
+//         right: 20px;
+//         display: flex;
+//         padding: 0;
+//         background-color: transparent;
+//         border: rgba(0, 0, 0, 0);
+//    }
 
 
 

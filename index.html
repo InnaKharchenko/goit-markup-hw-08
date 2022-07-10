@@ -47,26 +47,23 @@
             >
           </li>
         </ul>
-        <button type="button" class="menu-open-btn">
+        <button 
+        type="button" 
+        class="menu-button is-open"
+        aria-expanded="false" 
+        data-menu-button>
          <svg 
          width="40" 
          height="40" 
          aria-label="Переключатель мобильного меню">
-            <!-- <use class="icon-cross" href="./images/icons.svg#icon-close"></use> -->
+            <use class="icon-cross" href="./images/icons.svg#icon-close"></use> 
             <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
       <!--Mobile menu-->
-  <div class="mobile-menu is-hidden">
-    <button type="button" class="menu-close-btn">
-         <svg 
-         width="40" 
-         height="40" 
-         aria-label="Переключатель мобильного меню">
-            <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    
     <ul class="mobile-menu__nav">
       <li class="mobile-menu__item-nav"> 
         <a href="" class="mobile-menu__link-nav">Студия</a>
