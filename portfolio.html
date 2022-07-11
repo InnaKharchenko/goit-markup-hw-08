@@ -25,12 +25,12 @@
           >
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--current link" href="./index.html"
-                >Студия</a
-              >
+              <a class="navigation__link link" href="./index.html">Студия</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
+              <a class="navigation__link navigation__link--current" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="navigation__item"><a class="navigation__link link" href="">Контакты</a></li>
           </ul>
@@ -54,20 +54,28 @@
         </ul>
         <button
           type="button"
-          class="menu-button is-open"
+          class="menu-button menu-toggle js-open-menu"
           aril-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
+          aria-controls="mobile-menu"
         >
           <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use>
             <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
       <!--Mobile menu-->
 
-      <div class="menu-container" id="menu-container" data-menu>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button
+          type="button"
+          class="menu-button menu-toggle js-close-menu"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
         <ul class="mobile-menu__nav">
           <li class="mobile-menu__item-nav">
             <a href="" class="mobile-menu__link-nav mobile-menu__link-curent">Студия</a>
@@ -840,6 +848,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -48,20 +48,27 @@
           </li>
         </ul>
           <button type="button" 
-          class="menu-button is-open" 
+          class="menu-button menu-toggle js-open-menu" 
           aril-expanded="false"
-          aria-controls="menu-container" 
-          data-menu-button>
+          aria-controls="mobile-menu">
               <svg width="40" height="40" 
                 aria-label="Переключатель мобильного меню">
-                <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use> 
                 <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>  
               </svg>
         </button>
       </div>
       <!--Mobile menu-->
       
-      <div class="menu-container" id="menu-container" data-menu>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" 
+          class="menu-button menu-toggle js-close-menu" 
+          aria-controls="mobile-menu">
+              <svg width="40" height="40" 
+                aria-label="Переключатель мобильного меню">
+                <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use> 
+      
+              </svg>
+        </button>
           
         <ul class="mobile-menu__nav">
           <li class="mobile-menu__item-nav"> 
