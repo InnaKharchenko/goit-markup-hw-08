@@ -1,40 +1,55 @@
-   .mob-menu {
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100vw;
-       height: 100vh;
-       z-index: 1;
+   .menu-container {
+       display: none;
        
-       overflow: auto;
-       display: flex;
-       flex-direction: column;
-       background-color: var(--second-accent-text-color);
-       padding-top: 48px;
-       padding-bottom: 48px;
+       @media screen and (max-width: 767px) {
 
-       &.is-open {
-           display: block;
+            position: fixed;
+            
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            opacity: 1;
+            overflow: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--second-accent-text-color);
+                transition: opacity var(--slow-anim), visibility var(--slow-anim);
+                padding: 48px 40px 48px 40px;
+                
+            
+            &.is-open {
+                    
+                display: block;
+                transform: translateX(0);
+       }
+   }
+   }
+    
+   .menu-button {
+       display: inline-flex;
+       margin: 0;
+       margin-left: auto;
+       padding: 0;
+       border: none;
+       background-color: transparent;
+
+       @media screen and (min-width: 768px) {
+           display: none;
        }
    }
 
-    
+   .menu-button .icon-menu-close {
+       display: none;
+   }
 
+   .menu-button.is-open .icon-menu-close {
+       display: block;
+   }
 
-    .menu-open-btn {
-    display: block;
-    margin-left: auto;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    }
-
-
-    .menu-close-btn {
-        display: block;
-        margin-left: auto;
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
-        }
+   .menu-button.is-open .icon-menu {
+       display: none;
+   }
 
 
    .mobile-menu__contacts {
@@ -96,20 +111,22 @@
 
    .mobile-menu__socials {
        display: flex;
-       margin-right: auto;
-       margin-left: auto;
+    
    }
 
-    .mobile-menu__item-socials {
+    .mobile-menu__item-socials  {
         list-style: none;
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        justify-content: flex-start;
+        
+        &:not(:last-child) {
+            padding-right: 10px;
+            margin-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
         
         
         
-        //  &:last-child {
-        //         border-right: o;
-        //     }
-
+        
     }
 
     .mobile-menu__item-socials:not(:last-child) {

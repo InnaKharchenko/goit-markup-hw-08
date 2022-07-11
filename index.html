@@ -47,23 +47,22 @@
             >
           </li>
         </ul>
-          <button type="button" class="menu-open-btn">
+          <button type="button" 
+          class="menu-button is-open" 
+          aril-expanded="false"
+          aria-controls="menu-container" 
+          data-menu-button>
               <svg width="40" height="40" 
                 aria-label="Переключатель мобильного меню">
-                 <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
-                  
-          </svg>
+                <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use> 
+                <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>  
+              </svg>
         </button>
       </div>
       <!--Mobile menu-->
-      <div class="mob-menu">
-      <div class="mob-container">
-          <button type="button" class="menu-close-btn">
-              <svg width="40" height="40" 
-                aria-label="Переключатель мобильного меню">
-                 <use class="icon-menu-close" href="./images/icons.svg#icon-close"></use> 
-          </svg>
-        </button>
+      
+      <div class="menu-container" id="menu-container" data-menu>
+          
         <ul class="mobile-menu__nav">
           <li class="mobile-menu__item-nav"> 
             <a href="" class="mobile-menu__link-nav mobile-menu__link-curent ">Студия</a>
@@ -99,7 +98,6 @@
             </ul>
       </div>
         
-      </div>
 
   
     </header>
