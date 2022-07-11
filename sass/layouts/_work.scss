@@ -6,6 +6,11 @@
 }
 .works-section {
     padding-bottom: 94px;
+
+    @media (max-width: 1199px) {
+            display: none;
+        }
+    
 }
 
 .work__list {
