@@ -84,6 +84,12 @@
         font-size: 44px;
         line-height: 1.36;
         }
+
+        @media screen and (max-width: 480) {
+            width: 320px;
+        }
+
+    
     }
    
 
